@@ -91,7 +91,7 @@ print (count, count / float(len(preds)))
 print (len(cheattest[['Prediction','Survived','Name']].index))
 cheattest['Survived_real'] = cheattest.Survived
 cheattest= cheattest.drop(['Prediction','Survived'], axis=1)
-gender_test = pd.merge(gendermodel, cheattest, on='PassengerId', how='left')
+gender_test = pd.merge(gendermodel, cheattest, on='PassengerId', how='left') 
 print (len(gendermodel.index))
 print (len(gender_test.index))
 
